@@ -1,0 +1,187 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <iomanip>
+
+#define Pi 3.14
+
+using namespace std;
+
+long double fact(int);
+
+int main() {
+	
+	setlocale(LC_ALL, "RUS");
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 1"s << endl;
+/*
+	cout << fixed << setprecision(4);
+	double a1, b1, y1, upp1, downn1;
+	cout << "Введите 2 числа"s << endl;
+	cin >> a1 >> b1;
+	upp1 = (  cos(2*Pi*pow(b1,2)) + pow(a1,3)  );
+	downn1 = sqrt( 1.87 + (pow(a1,2)/(b1 + cos (3.42 * pow(b1,2) ))));
+	y1 = upp1 / downn1;
+	cout << "y = "s << y1 << endl;
+
+	cout << "Zadanie 4"s << endl;
+
+	double a4, b4, sumabs4;
+	cout << "Введите 2 числа"s << endl;
+	cin >> a4 >> b4;
+
+	sumabs4 = abs(a4) + abs(b4);
+	cout << "Сумма модулей чисел = "s << sumabs4 << endl;
+
+	cout << "Zadanie 3.1"s << endl;
+	double n31;
+	int  j31, i31;
+	cout << "n"s << endl;
+	cin >> n31 >> j31 >> i31;
+	while (j31 < n31) {
+		if ( (n31 / i31) == 0 && n31 != j31) {
+			cout << j31 << endl;
+		}
+	}
+
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 3.2"s << endl;
+
+	float a32,a132, a232, min32, max32, res32;
+	int i;
+	cout << "a1=,a2=,"s << endl;
+	cin >> a132 >> a232 >> min32 >> max32;
+	if (a132>a232) {
+		a132 = max32;
+		a232 = min32;
+	}
+	else {
+		a232 = max32;
+		a132 = min32;
+	}
+	i = 3;
+	while (i < 100) {
+		cout << "a "s << i << " ="s << endl;
+		cin >> a32;
+		if (a32 < min32) {
+			min32 = a32;
+		}
+		if (a32 > max32) {
+			max32 = a32;
+			i++;
+			res32 = max32 - min32;
+			cout << "результат = "s << res32 << endl;
+		}
+	}
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 3.3"s << endl;
+	int n33;
+	double y33 = 1;
+	cin >> n33;
+	if (n33 % 1 != 0) {
+		for (i = 1; n31; i++) {
+			y33 *= y33 * i;
+		}
+	}
+	else {
+		for (i = 1; n33; i += 2) {
+			y33 = y33 * i;
+			}
+		}
+	
+	cout << "y = "s << y33 << endl;
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 3.4"s << endl;
+
+	int k34, x34, m34, n34;
+	double s34;
+	float rez34 = 0;
+	float rezs34 = 0;
+	cout << "n:, x:"s << endl;
+	cin >> n34 >> x34;
+	for (k34 = 1; n34;) {
+		for (m34 = k34; n34; ) {
+			s34 = (x34 + k34) / m34;
+			rez34 += s34;
+		}
+		rezs34 = rezs34 + rez34;
+	}
+	cout << "rezyltat = " << rezs34 << endl;
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 3.5"s << endl;
+
+	int I35, i35, j35, n35, s35 = 0;
+	cin >> n35 >> I35;
+	for (i35 = 1; n35;) {
+		for (j35 = 1; I35;) {
+			s35 = 1 / (i35 + 2 * j35);
+		}
+	}
+	cout << "S = "s << s35 << endl;
+	cout << "***********************************"s << endl;
+	cout << "Zadanie 3.6"s << endl;
+
+	double fac36 = 1;
+	double s36 = 0;
+	double k36, n36;
+	double zn36;
+	for (k36 = 1; 10;) {
+		s36 = 0;
+		for (n36 = 1; k36;) {
+			s36 = s36 + sin(1 + k36);
+			fac36 *= k36;
+			zn36 = s36 / fac36;
+			s36 = s36 + zn36;
+		}
+	}
+	cout << "S = "s << s36 << endl;
+	cout << "***********************************"s << endl;
+
+	cout << "Zadanie 3.7"s << endl;
+
+	int s37, n37, i37, k37;
+	double l37;
+	cout << "Enter n"s << endl;
+	cin >> n37;
+	for (i37 = 1; n37;) {
+		s37 = sqrt(i37) * i37 - 3 * i37 + sqrt(n37) + n37;
+		if (s37 % 3 == 0) {
+			k37 = s37 % 3;
+		}
+		if (k37 % 3 != 0 ) {
+			l37 = l37 + s37;
+		}
+	}
+	cout << "rezyltat = "s << l37 << endl;
+	*/
+
+
+	cout << "***********************************"s << endl;
+	
+	cout << "Zadanie 2"s << endl;
+
+	long double x22, y22, posled22, d22 ;
+	y22 = 0;
+	int n22=1;
+	cin >> x22 >> n22;
+	d22 = fact(n22);
+	if (abs(x22) < 10000000000000) {
+		posled22 = pow(-1, n22 - 2) * ((pow(x22, 2 * n22)) / (d22 * (2 * n22 + 1)));
+		for (n22 = 0; n22 < 5; n22++) {
+			y22 = x22 * posled22;
+		}
+	}
+	cout << "y = "s << y22 << endl;
+
+
+ }
+
+ long double fact(int n22)
+ {
+	 if (n22 < 0) 
+		 return 0; 
+	 if (n22 == 0) 
+		 return 1; 
+	 else 
+		 return n22 * fact(n22 - 1); 
+ }
